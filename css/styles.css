@@ -1,26 +1,116 @@
 /* Color Palette
-# - color 1
-# - color 2
-# - color 3
-# - color 4
+#3A5FCF  (Primary)
+#FF6B6B  (Accent)
+#F7F8FC  (Bg Light)
+#0F172A  (Text)
+#64748B  (Muted)
 */
 
 /* Global styles 
 ------------------------------------*/
-body {
-    /*background: lightblue;*/
+:root{
+  --primary:#3A5FCF;
+  --accent:#FF6B6B;
+  --bg:#F7F8FC;
+  --text:#0F172A;
+  --muted:#64748B;
+
+  --radius:16px;
+  --space-1:.5rem;
+  --space-2:1rem;
+  --space-3:1.5rem;
+  --space-4:2rem;
 }
 
 
+body{
+  margin:0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1,h2{
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+h1{
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: .2px;
+  margin: .25em 0 .1em;
+}
+
+h2{
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+  margin: 0 0 .75rem;
+}
+
+h3{
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-weight: 600;
+  margin: 0 0 .35rem;
+}
+
 /* Header & Footer 
 ------------------------------------*/
+header{
+  max-width: 920px;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-2) var(--space-3);
+  text-align: center;
+  background: #fff;
+  border-bottom: 1px solid #e9eef6;
+}
 
+header img{
+  display:block;
+  margin: 0 auto var(--space-2);
+  border-radius: 12px;
+  object-fit: cover;
+}
 
+header h1{ color: var(--primary); }
+header h2{ color: var(--muted); font-weight: 600; }
+
+footer{
+  margin-top: var(--space-4);
+  padding: var(--space-4) var(--space-2);
+  text-align: center;
+  background: #eef2ff;
+  border-top: 1px solid #dfe6fb;
+}
+
+footer a{
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 .5rem;
+}
+footer a:hover{ text-decoration: underline; }
 
 /* Work Experience
 ------------------------------------*/
+section.work{
+  max-width: 920px;
+  margin: var(--space-4) auto 0;
+  padding: var(--space-3) var(--space-2);
+  background: #ffffff;
+  border: 1px solid #e9eef6;
+  border-radius: var(--radius);
+}
 
 
 
 /* Education
 ------------------------------------*/
+section.education{
+  max-width: 920px;
+  margin: var(--space-4) auto;
+  padding: var(--space-3) var(--space-2);
+  background: #fbfdff;
+  border: 1px solid #e9eef6;
+  border-radius: var(--radius);
+}
